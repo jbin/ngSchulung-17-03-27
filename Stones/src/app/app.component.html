@@ -1,4 +1,4 @@
 <h1>
   {{title}}
 </h1>
-<stn-product></stn-product>
+<stn-product [(product)]="productApp" (priceChange)="onPriceChange($event)"></stn-product>
