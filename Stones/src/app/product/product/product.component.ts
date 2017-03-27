@@ -16,8 +16,8 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  raisePrice() {
-    this.product.price += 5;
+  changePrice(price: number) {
+    this.product.price = price;
     this.priceChange.emit(this.product.price);
     this.productChange.emit(this.product);
   }
