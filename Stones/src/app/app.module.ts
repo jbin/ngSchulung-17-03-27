@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
+import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductModule } from './product/product.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ProductModule
+    ProductModule,
+    MaterialModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'de' }

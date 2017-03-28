@@ -1,6 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span>{{title}}</span>
+
+  <md-toolbar-row>
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">verified_user</md-icon>
+  </md-toolbar-row>
+</md-toolbar>
 
 <div >
   <stn-product *ngFor="let product of productList" [product]="product">
