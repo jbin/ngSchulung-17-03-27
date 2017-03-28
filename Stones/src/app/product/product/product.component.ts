@@ -8,9 +8,12 @@ import { Product } from '../product';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() product: Product ;
+  @Input() product: Product;
   @Output() priceChange: EventEmitter<number> = new EventEmitter<number>();
   @Output() productChange: EventEmitter<Product> = new EventEmitter<Product>();
+
+  styles = { border: '4px solid red' };
+
   constructor() { }
 
   ngOnInit() {

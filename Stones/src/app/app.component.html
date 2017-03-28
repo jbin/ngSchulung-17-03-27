@@ -4,3 +4,8 @@
 <stn-product [(product)]="productApp" (priceChange)="onPriceChange($event)">
   <h4>Super Produkt</h4>
 </stn-product>
+
+<div >
+  <stn-product *ngFor="let product of productList" [product]="product">
+  </stn-product>
+</div>
