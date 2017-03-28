@@ -1,8 +1,9 @@
 <ng-content></ng-content>
 <p [ngClass]="{'green-border': product.price <50}">
-  id : {{product.id}} <br>
-  Preis: {{product.price}} <br>
-  Gewicht: {{product.weight}}
+  id : {{product.id}} <br> Preis: {{product.price}} <br> Gewicht: {{product.weight}}
 </p>
-<input type="text" #price >
-<button (click)="changePrice(price.value)">Preiserhöhung</button>
+<button (click)="editEnabled=!editEnabled">toggle form</button>
+<div *ngIf="editEnabled">
+  <input type="text" #price>
+  <button (click)="changePrice(price.value)">Preiserhöhung</button>
+</div>

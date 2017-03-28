@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   @Output() productChange: EventEmitter<Product> = new EventEmitter<Product>();
 
   styles = { border: '4px solid red' };
+  editEnabled = true;
 
   constructor() { }
 
