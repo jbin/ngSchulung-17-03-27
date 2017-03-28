@@ -5,7 +5,7 @@
     </md-input-container>
     <md-input-container>
         <input mdInput name="name" type="text" placeholder="Name"  [formControl]="name">
-        <md-hint *ngIf="name.hasError('required')">Pflichtfeld</md-hint>
+        <md-hint *ngIf="name.errors">Pflichtfeld</md-hint>
     </md-input-container>
     <md-input-container>
         <input mdInput name="price" type="text" placeholder="Preis" [formControl]="price" >
@@ -17,3 +17,5 @@
     </md-input-container>
     <button [disabled]="!productForm.valid" color="primary" md-button (click)="save()">speichern</button>
 </form>
+
+{{productFormObject | json}}

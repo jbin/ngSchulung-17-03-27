@@ -9,11 +9,12 @@ import { FormControl, FormGroup, FormBuilder, Validators } from "@angular/forms"
 export class EditMdformComponent implements OnInit {
 
   id: FormControl = new FormControl();
-  name: FormControl = new FormControl('', [Validators.required]);
-  price: FormControl = new FormControl('', [Validators.minLength(2), Validators.required]);
+  name: FormControl = new FormControl('', [Validators.minLength(2), Validators.required]);
+  price: FormControl = new FormControl('', [ Validators.required]);
   weight: FormControl = new FormControl();
 
   productForm: FormGroup;
+  productFormObject:any;
 
   constructor(private builder: FormBuilder) {
     this.productForm = builder.group({
