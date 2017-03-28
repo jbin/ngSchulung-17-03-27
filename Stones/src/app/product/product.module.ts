@@ -4,13 +4,14 @@ import { ProductComponent } from './product/product.component';
 import { BruttoPipe } from './brutto.pipe';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { MaterialModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditMdformComponent } from './edit-mdform/edit-mdform.component';
 
 @NgModule({
   imports: [
-    CommonModule, MaterialModule, FormsModule
+    CommonModule, MaterialModule, FormsModule, ReactiveFormsModule
   ],
-  declarations: [ProductComponent, BruttoPipe, EditProductComponent],
-  exports: [ProductComponent, EditProductComponent]
+  declarations: [ProductComponent, BruttoPipe, EditProductComponent, EditMdformComponent],
+  exports: [ProductComponent, EditProductComponent, EditMdformComponent]
 })
 export class ProductModule { }
