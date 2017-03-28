@@ -7,9 +7,11 @@ import { MaterialModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditMdformComponent } from './edit-mdform/edit-mdform.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductlistComponent } from './productlist/productlist.component';
 
-const routes: Routes =[
-  {path:'products', component: EditMdformComponent}
+const routes: Routes = [
+  { path: 'products', component: ProductlistComponent },
+  { path: 'products/new', component: EditMdformComponent }
 ]
 
 
@@ -17,7 +19,7 @@ const routes: Routes =[
   imports: [
     CommonModule, MaterialModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
   ],
-  declarations: [ProductComponent, BruttoPipe, EditProductComponent, EditMdformComponent],
+  declarations: [ProductComponent, BruttoPipe, EditProductComponent, EditMdformComponent, ProductlistComponent],
   exports: [ProductComponent, EditProductComponent, EditMdformComponent]
 })
 export class ProductModule { }
