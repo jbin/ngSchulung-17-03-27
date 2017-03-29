@@ -1,14 +1,15 @@
-import { StonesPage } from './app.po';
+import { ProductsPage } from './app.po';
+import { browser } from "protractor/built";
 
 describe('stones App', () => {
-  let page: StonesPage;
+  let page: ProductsPage;
 
   beforeEach(() => {
-    page = new StonesPage();
+    page = new ProductsPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getTitleText()).toEqual('app works!?');
   });
 });
