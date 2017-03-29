@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class EditMdformComponent implements OnInit {
 
+  counter: number = 0;
+
   id: FormControl = new FormControl();
   name: FormControl = new FormControl('', [Validators.minLength(2), Validators.required]);
   price: FormControl = new FormControl('', [Validators.required]);
@@ -27,6 +29,7 @@ export class EditMdformComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.name.valueChanges.map(value => value.trim()).subscribe(value => this.counter = value.length);
   }
 
   save() {

@@ -7,6 +7,7 @@
         <input mdInput name="name" type="text" placeholder="Name"  [formControl]="name">
         <md-hint *ngIf="name.errors">Pflichtfeld</md-hint>
     </md-input-container>
+    {{counter}}
     <md-input-container>
         <input mdInput name="price" type="text" placeholder="Preis" [formControl]="price" >
         <md-hint></md-hint>
