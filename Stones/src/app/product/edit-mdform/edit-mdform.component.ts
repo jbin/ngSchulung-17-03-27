@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
+import { Product } from "../product";
 @Component({
   selector: 'stn-edit-mdform',
   templateUrl: './edit-mdform.component.html',
@@ -33,9 +34,14 @@ export class EditMdformComponent implements OnInit {
   }
 
   save() {
-    this.pService.addProduct(this.productForm.value);
-    alert('Gespeichert!');
-    this.router.navigate(['products']);
+    let product: Product = this.productForm.value;
+    product.id = null;
+    this.pService.addProduct(product).subscribe(() => {
+      alert('Gespeichert!');
+      this.router.navigate(['products']);
+    });
+
+
   }
 
 }
