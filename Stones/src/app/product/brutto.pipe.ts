@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BruttoPipe implements PipeTransform {
 
-  transform(value: number, tax?: number): any {
+  transform(value: number, tax?: number): number {
     if (!tax) {
       tax = 19;
     }

@@ -12,7 +12,7 @@ export class ProductService {
       .map(products => products.json());
   }
 
-  addProduct(product: Product): Observable<any> {
+  addProduct(product: Product): Observable<any> { 
     return this.http.post('http://ec2-35-157-141-170.eu-central-1.compute.amazonaws.com:8080/api/products', product);
   }
 
