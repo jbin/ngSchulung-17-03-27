@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditMdformComponent } from './edit-mdform/edit-mdform.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductService } from './product.service';
 
 const routes: Routes = [
   { path: 'products', component: ProductlistComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   imports: [
     CommonModule, MaterialModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
   ],
+  providers: [ProductService],
   declarations: [ProductComponent, BruttoPipe, EditProductComponent, EditMdformComponent, ProductlistComponent],
   exports: [ProductComponent, EditProductComponent, EditMdformComponent]
 })

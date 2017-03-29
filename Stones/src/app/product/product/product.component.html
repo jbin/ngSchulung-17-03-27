@@ -1,5 +1,6 @@
 <ng-content></ng-content>
 <p [ngClass]="{'green-border': product.price <50}">
+  <strong>{{product.name}}</strong>
   id : {{product.id}} <br> Preis: {{product.price | brutto | currency:"EUR"}}  - {{product.price}}<br> Gewicht: {{product.weight}}
 </p>
 <button (click)="editEnabled=!editEnabled">toggle form</button>
