@@ -1,0 +1,21 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "product": 3
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "product": {
+      "1": "{\"name\":\"Granitstein\",\"id\":1,\"price\":12.54,\"weight\":200}",
+      "2": "{\"name\":\"Marmor\",\"id\":2,\"price\":76.32,\"weight\":120}"
+    }
+  }
+}
